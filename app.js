@@ -6,6 +6,6 @@ const userRouter = require("./api/users/router");
 app.use(express.json());
 
 app.use("/api/users", userRouter);
-app.listen(process.env.APP_PORT, () => {
-    console.log("server running on PORT : ", process.env.APP_PORT);
+app.listen(process.env.APP_PORT  || 8080, () => {
+    console.log("App deployed at port : ", process.env.APP_PORT);
 });
